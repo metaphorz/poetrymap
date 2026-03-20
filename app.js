@@ -547,6 +547,8 @@ function attachPopupAndSidebar(poem, marker, sidebarContainer) {
                 </div>
             </div>
             <p class="font-body text-sm text-on-surface-variant mb-1">${poem.author}</p>
+            ${poem.locationCoords ? '<p class="font-label text-[0.6rem] tracking-wider text-outline mb-0.5">' + poem.locationCoords + '</p>' : ''}
+            ${poem.locationName ? '<p class="font-label text-[0.6rem] tracking-wider text-outline/70 mb-1">' + poem.locationName + '</p>' : ''}
             ${poem.accuracy ? '<p class="mb-3">' + accuracyBadge(poem.accuracy, 'sm') + '</p>' : ''}
             <div class="font-body text-[0.9rem] text-on-surface leading-relaxed mb-6 space-y-3">
                 ${poem.textHTML}
