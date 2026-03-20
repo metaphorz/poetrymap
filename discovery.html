@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discovery Library - The Cartographic Lyricist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#1c1c16",
+                        "on-surface-variant": "#42474d",
+                        "on-secondary-fixed-variant": "#564500",
+                        "surface-dim": "#dddad0",
+                        "on-background": "#1c1c16",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fdf9ef",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fdf9ef",
+                        "on-tertiary-container": "#ae8968",
+                        "surface-container-highest": "#e6e2d8",
+                        "on-tertiary-fixed-variant": "#5d4125",
+                        "surface-variant": "#e6e2d8",
+                        "primary": "#001629",
+                        "tertiary-fixed": "#ffdcbf",
+                        "inverse-on-surface": "#f4f0e6",
+                        "primary-fixed-dim": "#a8caef",
+                        "on-secondary-fixed": "#231b00",
+                        "surface-container": "#f2eee4",
+                        "on-primary-container": "#7293b6",
+                        "inverse-surface": "#31312a",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ece8de",
+                        "secondary-fixed": "#ffe081",
+                        "secondary-container": "#fdd755",
+                        "tertiary-container": "#3c240b",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#002b49",
+                        "outline-variant": "#c3c7ce",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f7f3e9",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf9ef",
+                        "inverse-primary": "#a8caef",
+                        "secondary-fixed-dim": "#e8c344",
+                        "secondary": "#725c00",
+                        "on-primary-fixed": "#001d34",
+                        "on-secondary-container": "#735d00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2c1601",
+                        "tertiary-fixed-dim": "#e8bf9a",
+                        "primary-fixed": "#cfe5ff",
+                        "tertiary": "#241000",
+                        "outline": "#73777e",
+                        "surface-tint": "#406182",
+                        "on-primary-fixed-variant": "#274969"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#fdf9ef] dark:bg-[#1c1c16] fixed top-0 z-50 w-full">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#001629] dark:text-[#fdf9ef] cursor-pointer">menu_book</span>
+<h1 class="text-2xl font-serif italic text-[#001629] dark:text-[#fdf9ef]">The Cartographic Lyricist</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#73777e] dark:text-[#c3c7ce] font-label text-[0.75rem] uppercase tracking-widest hover:text-[#001629] transition-colors" href="#">Map</a>
+<a class="text-[#001629] dark:text-[#fdf9ef] font-bold font-label text-[0.75rem] uppercase tracking-widest" href="#">Discovery</a>
+<a class="text-[#73777e] dark:text-[#c3c7ce] font-label text-[0.75rem] uppercase tracking-widest hover:text-[#001629] transition-colors" href="#">Anthology</a>
+<a class="text-[#73777e] dark:text-[#c3c7ce] font-label text-[0.75rem] uppercase tracking-widest hover:text-[#001629] transition-colors" href="#">Saved</a>
+</nav>
+<span class="material-symbols-outlined text-[#001629] dark:text-[#fdf9ef] cursor-pointer">search</span>
+</div>
+</div>
+<div class="bg-[#f7f3e9] dark:bg-[#241000] h-[1px] w-full"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 mt-20 mb-24 px-6 max-w-7xl mx-auto w-full">
+<!-- Hero Section: Curated Choice -->
+<section class="mb-16 pt-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-4 block">Monthly Selection</span>
+<h2 class="text-5xl md:text-7xl font-headline leading-tight tracking-tight text-primary">The Romantics</h2>
+<p class="text-lg md:text-xl text-on-surface-variant mt-6 max-w-xl leading-relaxed">
+                        A cartographic journey through the sublime. Revisit the Lake District through the eyes of Wordsworth and Coleridge, where every peak holds a stanza.
+                    </p>
+<div class="mt-8">
+<a class="inline-block bg-primary text-on-primary px-8 py-3 rounded-sm font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-colors duration-300" href="#">
+                            Explore Collection
+                        </a>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden shadow-sm relative z-10">
+<img alt="Mist rolling over English peaks" class="w-full h-full object-cover grayscale-[0.3] contrast-[1.1]" data-alt="Misty landscape of rolling green hills and mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABSnhji_MesQdYIZ7XVW1UASzZ8_iu-pceaIBI59GIh5vJRKdiFHtYK5I8JkfFLZxO1m7fK-Iulhz9SwyFrZc5DQoRETufhvPWFodZZ-sL7liOBExiY3bk_tJ4Qpxx_fjCc_YqfB8yIZeKChfY5MHaWg7dlnFhjyOgzDNiPKFbZQkdcclJigkuASLw6eHkOK4hDLMCFqb71yWCB_SdApv8rt0fWWwx1wXoDVd83Q_8mH32KK_rtJxPkzr4TVC37or9Na9lzudUI2I"/>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-6 -left-6 w-full h-full border border-outline-variant/20 -z-10 translate-x-4 translate-y-4"></div>
+</div>
+</div>
+</section>
+<!-- Discovery Library Grid -->
+<section class="space-y-12 pb-12">
+<div class="flex justify-between items-baseline border-b border-outline-variant/10 pb-4">
+<h3 class="text-3xl font-headline italic">The Archives</h3>
+<span class="font-label text-[0.65rem] uppercase tracking-widest opacity-60">Sorted by Chronology</span>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Collection Card: Victorian Echoes -->
+<a class="group cursor-pointer" href="#">
+<div class="aspect-square bg-surface-container-low mb-6 overflow-hidden relative">
+<img alt="Victorian London street lamp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Antique street lamp in foggy London alley" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGLz5F7w2aB_36BhkFcSC3Qa23ngKRbi3u7idvm-qljjORkclRXLE2AHIVc2jA-zBudrnSnX6PRmVPUZfv2-kB7cmxI4kyjvjWla_6tUguxIwHtIRSMbZx9ToE_zIbUry56lI2mfvNUc7pNkCEESsT3TnMix9p5Ebka8MwXv81tXs2BWdlea5puy5rYDex3Z4A1OyLaylYGpU18HDvI4kbvGvWrYw8l4o-9su9o6rtFf0KCKUjal2cAaOdnFIdd4nEhb5uaCCP1-c"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<span class="font-label text-[0.6rem] uppercase tracking-[0.2em] text-secondary">Era: 1837 — 1901</span>
+<h4 class="text-2xl font-headline mt-2 group-hover:text-secondary transition-colors">Victorian Echoes</h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed font-body">
+                        Industrial soot, cobblestone rhythm, and the profound melancholy of the urban sprawl.
+                    </p>
+</a>
+<!-- Collection Card: The Beat Generation -->
+<a class="group cursor-pointer md:translate-y-12" href="#">
+<div class="aspect-square bg-surface-container-low mb-6 overflow-hidden relative">
+<img alt="Typewriter and coffee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Vintage typewriter on a wooden desk with papers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKtbXhjmj5yQ6ZppCTovLqv6pUTg0eswx_1P8du5g7hW7THCgrBiLy38pei6u0EqlpqtbuhhIe_5uYAp6HLHbDf1XMVxYYsmjh5gHLlczxZzoXrvh_xsfR9A79MSnmflLK_SCJd-YlV5lsNxkjDwhdelO99FEZNIoe0_0_MMDe1qTh776st-6430EwBS2kudapadm5jr1qoZiXFw176c_9Ig8Pxrf2J_IVWGTHhGku7l1YIh2tBvi4iV3rzw3p9pn3vEYzuPnoII"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<span class="font-label text-[0.6rem] uppercase tracking-[0.2em] text-secondary">Era: 1940 — 1959</span>
+<h4 class="text-2xl font-headline mt-2 group-hover:text-secondary transition-colors">The Beat Generation</h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed font-body">
+                        The raw geography of the road. San Francisco jazz cellars and the vast American expanse.
+                    </p>
+</a>
+<!-- Collection Card: Ancient Topography -->
+<a class="group cursor-pointer" href="#">
+<div class="aspect-square bg-surface-container-low mb-6 overflow-hidden relative">
+<img alt="Greek ruins" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Ancient marble columns against a blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgCRRFx-d0NeparBXBYN-8zPEZUEJ9rtvISfu_OC-qqEUBGvVIeXIzcZixbFMCVL_X29TSlblXsP-fe1-eRWK9OuX9V--_Dz9Cs-YpUp446JgQ5olSs0HuiThkMS-bQw8ATeAnaMQQVU_P-YXn2d6VGnDX9t8u0_LlhB9gNiAZdXc6drpNeFIy4yMHbd6-mqlxXAE_tytvKLIQuptF7hoA16TSKZ1hU6a7PMvXDkablmuCcbMhvIBJ-DKDZU01_qkvs95MrhdPWWo"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<span class="font-label text-[0.6rem] uppercase tracking-[0.2em] text-secondary">Era: Antiquity</span>
+<h4 class="text-2xl font-headline mt-2 group-hover:text-secondary transition-colors">Ancient Topography</h4>
+<p class="text-sm text-on-surface-variant mt-3 leading-relaxed font-body">
+                        Map the odyssey. From the wine-dark sea to the marble dust of the Athenian forum.
+                    </p>
+</a>
+</div>
+</section>
+<!-- Regional Spotlight -->
+<section class="mt-24 mb-20 bg-surface-container-low p-12 relative overflow-hidden">
+<div class="relative z-10 max-w-2xl">
+<h3 class="text-sm font-label uppercase tracking-widest text-secondary mb-6">Regional Spotlight</h3>
+<h4 class="text-4xl font-headline mb-6">The Haiku of Kyoto</h4>
+<p class="text-lg leading-relaxed text-on-surface-variant italic mb-8">
+                    "An old silent pond...<br/>
+                    A frog jumps into the pond,<br/>
+                    splash! Silence again."
+                </p>
+<div class="flex items-center gap-4">
+<a class="border-b border-primary text-primary font-label text-xs uppercase tracking-widest pb-1 hover:text-secondary hover:border-secondary transition-all" href="#">View Region</a>
+<span class="text-outline-variant">/</span>
+<a class="border-b border-primary text-primary font-label text-xs uppercase tracking-widest pb-1 hover:text-secondary hover:border-secondary transition-all" href="#">124 Poems Found</a>
+</div>
+</div>
+<!-- Large faint graphic -->
+<div class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 pointer-events-none opacity-10">
+<span class="material-symbols-outlined text-[30rem]">landscape</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 bg-[#e6e2d8]/80 dark:bg-[#1c1c16]/80 backdrop-blur-md z-50 border-t border-[#c3c7ce]/15">
+<a class="flex flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">explore</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#725c00] text-[#fdf9ef] rounded-sm px-4 py-1 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">auto_stories</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Discovery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">collections_bookmark</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Anthology</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">star</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Saved</span>
+</a>
+</nav>
+<script src="data.js"></script><script src="app.js"></script></body></html>

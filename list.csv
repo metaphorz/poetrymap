@@ -1,0 +1,73 @@
+Poem Title,Poet,Location,Type,Coordinates,Accuracy
+Lines Composed a Few Miles above Tintern Abbey,William Wordsworth,"Tintern Abbey, Monmouthshire",The Nature Lyric,"51.6972, -2.6775",confirmed
+I Wandered Lonely as a Cloud,William Wordsworth,"Ullswater, Lake District",The Romantic Lyric,"54.557, -2.871",confirmed
+To Autumn,John Keats,"Winchester, Hampshire",The Seasonal Ode,"51.059, -1.318",confirmed
+Composed Upon Westminster Bridge,William Wordsworth,"Westminster Bridge, London",The Urban Sonnet,"51.5008, -0.1214",confirmed
+To a Mouse,Robert Burns,"Ayrshire, Scotland",The Scottish Lyric,"55.4586, -4.6292",approximate
+The Lake Isle of Innisfree,W. B. Yeats,"Lough Gill, County Sligo, Ireland",The Celtic Revival,"54.2562, -8.3616",confirmed
+Dover Beach,Matthew Arnold,"Dover, Kent, England",The Victorian Lyric,"51.1279, 1.3134",confirmed
+Adlestrop,Edward Thomas,"Adlestrop, Gloucestershire",The Georgian Lyric,"51.942, -1.65",confirmed
+Ode to a Nightingale,John Keats,"Hampstead Heath, London",The Romantic Lyric,"51.56, -0.16",compositional
+London,William Blake,"Soho, London",The Urban Critique,"51.5136, -0.1365",confirmed
+My Heart's in the Highlands,Robert Burns,The Scottish Highlands,The Scottish Lyric,"57.12, -4.71",approximate
+"Easter, 1916",W. B. Yeats,"Dublin, Ireland",The Historical Lyric,"53.3498, -6.2603",confirmed
+The Stolen Child,W. B. Yeats,"Glencar, County Leitrim",The Celtic Revival,"54.3361, -8.3746",confirmed
+Binsey Poplars,Gerard Manley Hopkins,"Binsey, Oxfordshire",The Nature Lyric,"51.76, -1.29",confirmed
+The Rime of the Ancient Mariner,Samuel Taylor Coleridge,"Watchet, Somerset",The Narrative Ballad,"51.18, -3.327",compositional
+Kubla Khan,Samuel Taylor Coleridge,"Porlock, Somerset",The Romantic Vision,"51.218, -3.633",compositional
+Grongar Hill,John Dyer,"Carmarthenshire, Wales",The Topographical Poem,"51.848, -4.053",confirmed
+The Braes of Yarrow,John Logan,"River Yarrow, Selkirkshire",The Scottish Ballad,"55.5414, -2.9904",confirmed
+The Deserted Village,Oliver Goldsmith,"Auburn, County Westmeath",The Pastoral Elegy,"53.4833, -7.7833",approximate
+Under Ben Bulben,W. B. Yeats,"Ben Bulben, County Sligo",The Epitaph,"54.3667, -8.4667",confirmed
+The Convergence of the Twain,Thomas Hardy,"Dorchester, England",The Stoic Elegy,"50.713, -2.428",compositional
+Ozymandias,Percy Bysshe Shelley,"Marlow, Buckinghamshire",The Romantic Sonnet,"51.572, -0.775",compositional
+The Lady of the Lake,Sir Walter Scott,"Loch Katrine, Scotland",The Romantic Narrative,"56.25, -4.5",confirmed
+The Lady of Shalott,"Alfred, Lord Tennyson","Tintagel Castle, Cornwall",The Arthurian Ballad,"50.667, -4.758",approximate
+Fern Hill,Dylan Thomas,"Llangain, Carmarthenshire",The Welsh Lyric,"51.81, -4.36",confirmed
+The Wild Swans at Coole,W.B. Yeats,"Coole Park, County Galway",The Irish Lyric,"53.08, -8.84",confirmed
+Digging,Seamus Heaney,"Bellaghy, County Londonderry",The Irish Lyric,"54.8, -6.52",approximate
+Auld Lang Syne,Robert Burns,"Dumfries, Scotland",The Scottish Lyric,"55.07, -3.61",compositional
+I Am!,John Clare,"Northamptonshire, England",The Romantic Lyric,"52.62, -0.32",compositional
+"Loveliest of Trees, the Cherry Now",A.E. Housman,"Shropshire, England",The Pastoral Lyric,"52.6, -2.75",approximate
+"The Old Vicarage, Grantchester",Rupert Brooke,"Grantchester, Cambridgeshire",The Pastoral Lyric,"52.17, 0.09",confirmed
+Elegy Written in a Country Churchyard,Thomas Gray,"Stoke Poges, Buckinghamshire",The Pastoral Lyric,"51.52, -0.58",confirmed
+Little Gidding,T.S. Eliot,"Little Gidding, Cambridgeshire",The Modernist Lyric,"52.42, -0.33",confirmed
+Frost at Midnight,Samuel Taylor Coleridge,"Nether Stowey, Somerset",The Romantic Lyric,"51.15, -3.15",confirmed
+Jerusalem,William Blake,"Felpham, West Sussex",The Romantic Lyric,"50.8, -0.65",compositional
+The Vagabond,Robert Louis Stevenson,Scottish Borders,The Scottish Lyric,"55.54, -2.85",compositional
+Life,Charlotte Brontë,"Haworth, West Yorkshire",The Victorian Lyric,"53.83, -1.95",compositional
+The Listeners,Walter de la Mare,"Kent, England",The Modernist Lyric,"51.25, 0.5",compositional
+Childe Harold's Pilgrimage,Lord Byron,"Newstead Abbey, Nottinghamshire",The Romantic Epic,"53.08, -1.19",approximate
+Slough,John Betjeman,"Slough, Berkshire",The Modernist Lyric,"51.51, -0.59",confirmed
+The Whitsun Weddings,Philip Larkin,"Hull Paragon Station, East Riding",The Modernist Lyric,"53.74, -0.34",approximate
+In the Bleak Midwinter,Christina Rossetti,"London, England",The Victorian Lyric,"51.5, -0.12",compositional
+Stopping by Woods on a Snowy Evening,Robert Frost,"Shaftsbury, Vermont",Classic Lyric,"42.9238, -73.1917",compositional
+The Road Not Taken,Robert Frost,"Dymock, Gloucestershire, England",Narrative Lyric,"51.89, -2.39",confirmed
+Mending Wall,Robert Frost,"Derry, New Hampshire",Blank Verse,"42.8656, -71.3031",confirmed
+Birches,Robert Frost,"Franconia, New Hampshire",Blank Verse,"44.227, -71.7465",approximate
+Fire and Ice,Robert Frost,"South Shaftsbury, Vermont",Epigrammatic Lyric,"42.9238, -73.1917",compositional
+After Apple-Picking,Robert Frost,"Derry, New Hampshire",Irregular Lyric,"42.86, -71.29",confirmed
+Nothing Gold Can Stay,Robert Frost,"South Shaftsbury, Vermont",Lyric Moment,"42.9238, -73.1917",compositional
+"""Out, Out—""",Robert Frost,"Bethlehem, New Hampshire",Tragic Narrative,"44.2783, -71.6852",confirmed
+The Gift Outright,Robert Frost,Washington D.C. (JFK Inauguration),Patriotic Recitation,"38.8899, -77.009",approximate
+New Hampshire,Robert Frost,The State of New Hampshire,Philosophical Topography,Regional Polygon,confirmed
+My November Guest,Robert Frost,"Derry, New Hampshire",Lyric Moment,"42.86, -71.29",approximate
+Storm Fear,Robert Frost,"Derry, New Hampshire",Narrative Lyric,"42.861, -71.291",confirmed
+The Tuft of Flowers,Robert Frost,"Derry, New Hampshire",Blank Verse,"42.862, -71.289",approximate
+A Late Walk,Robert Frost,"Derry, New Hampshire",Lyric Moment,"42.863, -71.288",approximate
+The Pasture,Robert Frost,"Derry, New Hampshire",Invitation,"42.864, -71.287",approximate
+Hyla Brook,Robert Frost,"Derry, New Hampshire",Blank Verse,"42.865, -71.286",confirmed
+The Oven Bird,Robert Frost,"Franconia, New Hampshire",Sonnet,"44.225, -71.745",approximate
+The Runaway,Robert Frost,"Franconia, New Hampshire",Narrative Lyric,"44.226, -71.746",approximate
+An Old Man's Winter Night,Robert Frost,"Franconia, New Hampshire",Blank Verse,"44.228, -71.748",approximate
+Dust of Snow,Robert Frost,"Shaftsbury, Vermont",Lyric Moment,"42.923, -73.19",approximate
+To Earthward,Robert Frost,"Shaftsbury, Vermont",Lyric Moment,"42.924, -73.192",compositional
+The Sound of the Trees,Robert Frost,"Franconia, New Hampshire",Lyric,"44.229, -71.749",approximate
+A Brook in the City,Robert Frost,"Lawrence, Massachusetts",Narrative Lyric,"42.707, -71.163",approximate
+Desert Places,Robert Frost,"Amherst, Massachusetts",Dark Lyric,"42.374, -72.52",approximate
+Acquainted with the Night,Robert Frost,"Ann Arbor, Michigan",Terza Rima,"42.28, -83.743",approximate
+Spring Pools,Robert Frost,"Shaftsbury, Vermont",Lyric,"42.925, -73.193",approximate
+The Need of Being Versed in Country Things,Robert Frost,"Franconia, New Hampshire",Elegiac Lyric,"44.23, -71.75",approximate
+Tree at My Window,Robert Frost,"Shaftsbury, Vermont",Personal Lyric,"42.926, -73.194",compositional
+Into My Own,Robert Frost,"Derry, New Hampshire",Sonnet,"42.866, -71.285",approximate
+The Line-Gang,Robert Frost,"Franconia, New Hampshire",Lyric,"44.231, -71.751",approximate

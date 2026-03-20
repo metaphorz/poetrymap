@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1c1c16",
+              "on-surface-variant": "#42474d",
+              "on-secondary-fixed-variant": "#564500",
+              "surface-dim": "#dddad0",
+              "on-background": "#1c1c16",
+              "on-error-container": "#93000a",
+              "surface-bright": "#fdf9ef",
+              "on-tertiary": "#ffffff",
+              "surface": "#fdf9ef",
+              "on-tertiary-container": "#ae8968",
+              "surface-container-highest": "#e6e2d8",
+              "on-tertiary-fixed-variant": "#5d4125",
+              "surface-variant": "#e6e2d8",
+              "primary": "#001629",
+              "tertiary-fixed": "#ffdcbf",
+              "inverse-on-surface": "#f4f0e6",
+              "primary-fixed-dim": "#a8caef",
+              "on-secondary-fixed": "#231b00",
+              "surface-container": "#f2eee4",
+              "on-primary-container": "#7293b6",
+              "inverse-surface": "#31312a",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#ece8de",
+              "secondary-fixed": "#ffe081",
+              "secondary-container": "#fdd755",
+              "tertiary-container": "#3c240b",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "primary-container": "#002b49",
+              "outline-variant": "#c3c7ce",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f7f3e9",
+              "on-secondary": "#ffffff",
+              "background": "#fdf9ef",
+              "inverse-primary": "#a8caef",
+              "secondary-fixed-dim": "#e8c344",
+              "secondary": "#725c00",
+              "on-primary-fixed": "#001d34",
+              "on-secondary-container": "#735d00",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#2c1601",
+              "tertiary-fixed-dim": "#e8bf9a",
+              "primary-fixed": "#cfe5ff",
+              "tertiary": "#241000",
+              "outline": "#73777e",
+              "surface-tint": "#406182",
+              "on-primary-fixed-variant": "#274969"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Newsreader"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>body {
+    background-color: #fdf9ef;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAzttDL5v1Hb9WZCvadeYet5Z7NL62OlMbScgHUNX1_uMGs3f9qqVDr2Wd2E5x_OvWVUWEaiut5NGxX4_fIQce00fVW8W7aJ-gwA8TePpynIQRzLJpt8EVISDt8RsWXTg4lePw8OouQlVjDYFu6vBf_nOQvqOTgup4TotiZQi87llDaOHU7GWpofrv2fmbvmAxz_D344uabWVFXdy_IfDy5X88uXqMUpAuAenW-6SEBR96EQg-0_3pkOMyN2Kw8H1Gw6BEO5pQDEa8);
+    font-family: "Newsreader", serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.asymmetric-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem
+    }
+@media (max-width: 768px) {
+    .asymmetric-grid {
+        grid-template-columns: 1fr
+        }
+    }
+.marginalia {
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #725c00;
+    line-height: 1.2;
+    opacity: 0.8
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-[#fdf9ef] dark:bg-[#1c1c16] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">menu_book</span>
+<h1 class="text-2xl font-serif italic text-[#001629] dark:text-[#fdf9ef] tracking-tight">The Cartographic Lyricist</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#e6e2d8] dark:hover:bg-[#241000] transition-colors duration-300 rounded-sm">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-6xl mx-auto min-h-screen">
+<!-- Header Section -->
+<section class="mb-16">
+<span class="font-label text-[0.75rem] uppercase tracking-widest text-secondary block mb-2">Personal Collection</span>
+<h2 class="text-5xl font-headline text-primary mb-4 leading-none">Anthology</h2>
+<p class="text-lg opacity-70 max-w-xl">A curated record of your poetic wanderings, bound in digital vellum and iron-gall ink.</p>
+</section>
+<!-- Bento Layout for Chapters -->
+<div class="asymmetric-grid">
+<!-- Left Column: Favorite Verses -->
+<div class="space-y-12">
+<div>
+<div class="flex items-baseline justify-between border-b border-outline-variant/20 pb-2 mb-8">
+<h3 class="text-2xl font-headline italic">Favorite Verses</h3>
+<span class="font-label text-[0.65rem] text-outline">Chapter I</span>
+</div>
+<!-- Poem Card 1 -->
+<article class="group relative bg-surface-container-low p-8 mb-8 transition-all duration-500 hover:bg-surface-container-high cursor-pointer">
+<div class="absolute -left-12 top-1/4 w-32 hidden lg:block pointer-events-none">
+<p class="marginalia text-right">Noted in London, <br/>near the Thames.</p>
+</div>
+<div class="space-y-4">
+<span class="font-label text-[0.7rem] text-secondary tracking-widest uppercase">The Wasteland</span>
+<p class="text-xl leading-relaxed text-primary">"April is the cruellest month, breeding <br/> Lilacs out of the dead land, mixing <br/> Memory and desire..."</p>
+<div class="flex items-center gap-4 pt-4">
+<span class="font-label text-[0.65rem] text-outline">T.S. Eliot</span>
+<span class="w-8 h-[1px] bg-outline-variant/30"></span>
+<span class="font-label text-[0.65rem] text-outline">April 1922</span>
+</div>
+</div>
+</article>
+<!-- Poem Card 2 -->
+<article class="group relative bg-surface-container-lowest p-8 mb-8 transition-all duration-500 hover:bg-surface-container-high cursor-pointer">
+<div class="space-y-4">
+<span class="font-label text-[0.7rem] text-secondary tracking-widest uppercase">Ozymandias</span>
+<p class="text-xl leading-relaxed text-primary italic">"Look on my Works, ye Mighty, and despair! <br/> Nothing beside remains. Round the decay <br/> Of that colossal Wreck..."</p>
+<div class="flex items-center gap-4 pt-4">
+<span class="font-label text-[0.65rem] text-outline">P.B. Shelley</span>
+<span class="w-8 h-[1px] bg-outline-variant/30"></span>
+<span class="font-label text-[0.65rem] text-outline">Found in Cairo</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Places Visited Section -->
+<div>
+<div class="flex items-baseline justify-between border-b border-outline-variant/20 pb-2 mb-8">
+<h3 class="text-2xl font-headline italic">Places Visited</h3>
+<span class="font-label text-[0.65rem] text-outline">Chapter II</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="aspect-[4/5] bg-surface-container-highest relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Vintage photograph of a rainy London street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVAJ9ykP6X6mYQ1W-xfSllXkNzufUeHrVV2PiZf8ajwVlXigziG7WnhOVrlttzrGNFAEj_sUVyU86-AMq5FdmfNuK1ACH_IR9j9UEuVUJYrM1FaCUI56paddtwiqlgN1LU95bfl-ZsCA5o_mrCjiWqxMw9SxBvG1x8B29O7B_QaNTBBd5wYK9PRkOUWjM_nNmSN_focprFhZzCzObjsGUv6M9YemJAme9GJ8BaLqgFk31_cgLsrZ_uWMJ7nVMBt9g6o1s_K8BdjMk"/>
+<div class="absolute bottom-0 left-0 p-4 w-full bg-gradient-to-t from-primary/80 to-transparent">
+<p class="font-label text-[0.7rem] text-surface uppercase tracking-widest">London, UK</p>
+<p class="text-surface/70 text-xs italic">14 verses discovered</p>
+</div>
+</div>
+<div class="aspect-[4/5] bg-surface-container-highest relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Hazy sunset over an ancient Egyptian landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg3Xf2YvpUAgIUYaRbcqYPol1ypVTNWUkI8Ez2NLNoH5GRPbzkVb-HdLyO8D6IC-Ksj4mcryvFbkvV6tAl52kpMknx5Qcymk1hNQz0BInv-KQWSUYg8xnuBOKG36l10rW5H8bknGPm90sab1kyWwUdniCOnwGflKv_uc-71F9Pk0NJrpf04qN4ggvIt6OA7zns2wuMZhyNNIoqVaLvD_og7__UmL9apxv1xhE2eCVPyKjFLAg2B_GhdaCAT-UVilgAghlQBiRLHoc"/>
+<div class="absolute bottom-0 left-0 p-4 w-full bg-gradient-to-t from-primary/80 to-transparent">
+<p class="font-label text-[0.7rem] text-surface uppercase tracking-widest">Cairo, EG</p>
+<p class="text-surface/70 text-xs italic">3 verses discovered</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Stats and Journal -->
+<div class="space-y-12 lg:pl-12">
+<div class="bg-surface-container-high p-10 relative">
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-secondary flex items-center justify-center rotate-12 shadow-xl">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-label text-[0.7rem] text-secondary tracking-widest uppercase mb-6">Lyricist Status</h4>
+<div class="space-y-6">
+<div>
+<p class="text-4xl font-headline text-primary">342</p>
+<p class="font-label text-[0.65rem] text-outline uppercase tracking-wider">Miles Traversed</p>
+</div>
+<div>
+<p class="text-4xl font-headline text-primary">87</p>
+<p class="font-label text-[0.65rem] text-outline uppercase tracking-wider">Stanzas Collected</p>
+</div>
+<div>
+<p class="text-4xl font-headline text-primary">12</p>
+<p class="font-label text-[0.65rem] text-outline uppercase tracking-wider">Metaphors Unlocked</p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/30">
+<p class="marginalia leading-relaxed">"One's destination is never a place, but a new way of seeing things." <br/>— Henry Miller</p>
+</div>
+</div>
+<div class="p-4 border border-outline-variant/15">
+<h4 class="font-label text-[0.7rem] text-primary tracking-widest uppercase mb-4">Recent Scribbles</h4>
+<ul class="space-y-4">
+<li class="group cursor-pointer">
+<p class="text-sm font-body italic group-hover:text-secondary transition-colors">The light in Paris feels heavy with the scent of old paper...</p>
+<p class="font-label text-[0.6rem] text-outline mt-1">Oct 14</p>
+</li>
+<li class="group cursor-pointer">
+<p class="text-sm font-body italic group-hover:text-secondary transition-colors">The map is bleeding at the edges today. More water colors needed.</p>
+<p class="font-label text-[0.6rem] text-outline mt-1">Oct 12</p>
+</li>
+</ul>
+</div>
+<div class="relative aspect-square bg-surface-container-low flex items-center justify-center p-8 text-center overflow-hidden">
+<div class="absolute inset-0 opacity-10 grayscale mix-blend-multiply" data-alt="Abstract watercolor map texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAH6kUUkqS_xYdsRSMeJvV-8_CpH2_fpyOtkKGdSMnk74THN_BJDyTS8-mKqQ5cp44NesD0JbEShAirjIWBYaCNfSFV7bQteijPoS1yzgXVLUJkRWFRbfwow0onqMHyOnPx55FMouoWokY3p6sBkDcdwDusDGAJrBdoyd3xtkb83MK9fOfRD5vhKC843OFKSUv5g6RX9GKvI-BmvYxakRzQTG3ssRq2UvX_5uj4FAXot4WeW5K8SIVPeOMRjID4u0jUmDngjvQtGWg'); background-size: cover;"></div>
+<div class="relative z-10">
+<p class="font-label text-[0.7rem] text-secondary tracking-widest uppercase mb-2">Next Destination</p>
+<p class="text-2xl font-headline text-primary">Kyoto</p>
+<p class="text-xs italic opacity-60 mt-2">Where the haikus rest among the cedar roots.</p>
+<button class="mt-6 px-6 py-2 bg-primary text-on-primary font-label text-[0.7rem] uppercase tracking-widest rounded-sm hover:bg-primary-container transition-all">Begin Journey</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#e6e2d8]/80 dark:bg-[#1c1c16]/80 backdrop-blur-md shadow-[0_-12px_40px_rgba(28,28,22,0.06)] flex justify-around items-center pt-3 pb-6 border-t border-[#c3c7ce]/15">
+<a class="flex flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1">auto_stories</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Discovery</span>
+</a>
+<!-- Active Nav: Anthology -->
+<a class="flex flex-col items-center justify-center bg-[#725c00] text-[#fdf9ef] rounded-sm px-4 py-1 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">collections_bookmark</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest font-bold">Anthology</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1">star</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Saved</span>
+</a>
+</nav>
+<!-- Global Noise Texture -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply z-[100]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_dfWnXdHH2ETK7BFRAOPv9xs84EcRzLQ0Xe_69fROUwh2QVx38PoUa-n6KOFZvymIQUi78TggDrDsfLRU44Hlt8UcTdYa1wPg34QaBw-ElK25ZF-D5rum84Vj3jNq3NhkENPg_a-IdCbAB3-eXWAhUU-aEyZ-hxbQ3LxlOs6CyTSArTsJ8qA0toeLEfk83Zb0Jnz-K1IEwUbTrhirxvildBI0DXkLns4XMJrXUJYG_16lV3ZQrE97TK-vdiL-8ScIIR9v5OhSaHE');"></div>
+<script src="data.js"></script><script src="app.js"></script></body></html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Cartographic Lyricist - Map</title>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+    .leaflet-popup-content-wrapper {
+        background: #f7f3e9 !important;
+        border-radius: 4px !important;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+        border: 1px solid rgba(122, 110, 93, 0.2) !important;
+    }
+    .leaflet-popup-tip {
+        background: #f7f3e9 !important;
+        border: 1px solid rgba(122, 110, 93, 0.2) !important;
+    }
+    .leaflet-popup-content p {
+        margin: 0 !important;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(122, 110, 93, 0.1);
+        border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(122, 110, 93, 0.4);
+        border-radius: 4px;
+    }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1c1c16",
+              "on-surface-variant": "#42474d",
+              "on-secondary-fixed-variant": "#564500",
+              "surface-dim": "#dddad0",
+              "on-background": "#1c1c16",
+              "on-error-container": "#93000a",
+              "surface-bright": "#fdf9ef",
+              "on-tertiary": "#ffffff",
+              "surface": "#fdf9ef",
+              "on-tertiary-container": "#ae8968",
+              "surface-container-highest": "#e6e2d8",
+              "on-tertiary-fixed-variant": "#5d4125",
+              "surface-variant": "#e6e2d8",
+              "primary": "#001629",
+              "tertiary-fixed": "#ffdcbf",
+              "inverse-on-surface": "#f4f0e6",
+              "primary-fixed-dim": "#a8caef",
+              "on-secondary-fixed": "#231b00",
+              "surface-container": "#f2eee4",
+              "on-primary-container": "#7293b6",
+              "inverse-surface": "#31312a",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#ece8de",
+              "secondary-fixed": "#ffe081",
+              "secondary-container": "#fdd755",
+              "tertiary-container": "#3c240b",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "primary-container": "#002b49",
+              "outline-variant": "#c3c7ce",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f7f3e9",
+              "on-secondary": "#ffffff",
+              "background": "#fdf9ef",
+              "inverse-primary": "#a8caef",
+              "secondary-fixed-dim": "#e8c344",
+              "secondary": "#725c00",
+              "on-primary-fixed": "#001d34",
+              "on-secondary-container": "#735d00",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#2c1601",
+              "tertiary-fixed-dim": "#e8bf9a",
+              "primary-fixed": "#cfe5ff",
+              "tertiary": "#241000",
+              "outline": "#73777e",
+              "surface-tint": "#406182",
+              "on-primary-fixed-variant": "#274969"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Newsreader"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>body {
+    background-color: #fdf9ef;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_lkTvOqwUOVBUD9j3D6Zo_qBkGKnmV2j0j2Vn6-xO5vE-GTeR4ENSxUkOz4KiFMu0JFKEzI9UuubkMuVytv_i3_aHrG7PjBi3-iEVdSAmF_DtG0hNIz77yFkpNAWpOGbDxWpd9rOsp51k5CZTCpHwfrZRUs9v-obuKp4Tny4MZQ8OgTAwMJLZks2HIYPegoRelm90D8qDSs_MLviUyJDd3XoGZDCctnVH-7cq_j8ClySgEHaQJp7zJuqOXVKsfoxo0YeynSMojuI);
+    background-repeat: repeat
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.glass-panel {
+    background: rgba(247, 243, 233, 0.8);
+    backdrop-filter: blur(20px)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#fdf9ef] dark:bg-[#1c1c16] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#001629] dark:text-[#fdf9ef]">menu_book</span>
+<h1 class="text-2xl font-serif italic text-[#001629] dark:text-[#fdf9ef] tracking-tight mr-4">The Cartographic Lyricist</h1>
+<div class="relative hidden sm:block">
+  <select id="collection-select" class="appearance-none bg-[#fdf9ef] border border-[#a8caef] text-[#001629] font-label text-xs uppercase tracking-widest py-1.5 pl-3 pr-8 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#725c00] cursor-pointer shadow-sm transition-colors hover:bg-[#f2eee4]">
+  </select>
+  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#001629]">
+      <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_drop_down</span>
+  </div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-8 font-label text-[0.75rem] uppercase tracking-widest text-[#001629]">
+<span class="text-[#001629] dark:text-[#fdf9ef] font-bold">Map</span>
+<span class="hidden text-[#73777e] dark:text-[#c3c7ce] hover:bg-[#e6e2d8] transition-colors duration-300 px-2 py-1">Discovery</span>
+<span class="hidden text-[#73777e] dark:text-[#c3c7ce] hover:bg-[#e6e2d8] transition-colors duration-300 px-2 py-1">Anthology</span>
+<span class="hidden text-[#73777e] dark:text-[#c3c7ce] hover:bg-[#e6e2d8] transition-colors duration-300 px-2 py-1">Saved</span>
+</div>
+<a id="export-csv-link" href="list.csv" download="list.csv" class="material-symbols-outlined text-[#001629] dark:text-[#fdf9ef] hover:text-[#725c00] transition-colors mr-2 cursor-pointer no-underline" title="Download All Entries as CSV">download</a>
+<span class="material-symbols-outlined text-[#001629] dark:text-[#fdf9ef] cursor-pointer">search</span>
+</div>
+</header>
+<div class="bg-[#f7f3e9] dark:bg-[#241000] h-[1px] w-full fixed top-[64px] z-50"></div>
+<main class="relative pt-16 h-screen w-full overflow-hidden flex flex-col md:flex-row">
+<!-- Interactive Map Canvas -->
+<div class="relative flex-grow h-full bg-[#e8e3d9] overflow-hidden" id="map-wrapper">
+<div class="absolute inset-0 z-0" id="leaflet-map" style="filter: sepia(0.6) hue-rotate(-15deg) contrast(0.9) brightness(0.9) saturate(0.8);"></div>
+<!-- Map Overlay: Pins -->
+<div class="absolute inset-0 pointer-events-none z-10" id="map-pins-container">
+</div>
+<!-- Map Controls (Floating) -->
+<div class="absolute bottom-24 right-6 flex flex-col gap-2 z-40">
+<button class="w-12 h-12 glass-panel flex items-center justify-center rounded-sm hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<button class="w-12 h-12 glass-panel flex items-center justify-center rounded-sm hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">remove</span>
+</button>
+<button class="w-12 h-12 bg-secondary flex items-center justify-center rounded-sm shadow-lg text-surface hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+</button>
+</div>
+</div>
+<!-- Sidebar / Details Panel (Asymmetric Editorial Layout) -->
+<aside class="w-full md:w-[400px] h-[353px] md:h-full bg-surface-container-low md:border-l border-outline-variant/15 z-40 flex flex-col">
+<div class="p-8 overflow-y-auto flex-grow scrollbar-hide">
+<header class="mb-10">
+<p class="font-label text-[0.7rem] uppercase tracking-[0.2em] text-secondary mb-2">Curated Anthology</p>
+<h2 class="font-headline text-4xl leading-tight">Cartography of <br/>England</h2>
+</header>
+<div class="space-y-12" id="sidebar-poems-container">
+</div>
+</div>
+<!-- Contextual Action -->
+<div class="p-8 pt-0 mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary font-label text-[0.75rem] uppercase tracking-widest rounded-sm hover:bg-primary-container transition-colors ease-out duration-300">
+                    Write in this vicinity
+                </button>
+</div>
+</aside>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 bg-[#e6e2d8]/80 dark:bg-[#1c1c16]/80 backdrop-blur-md z-50 border-t border-[#c3c7ce]/15 shadow-[0_-12px_40px_rgba(28,28,22,0.06)]">
+<a class="flex flex-col items-center justify-center bg-[#725c00] text-[#fdf9ef] rounded-sm px-4 py-1 scale-95 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Map</span>
+</a>
+<a class="hidden flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Discovery</span>
+</a>
+<a class="hidden flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined">collections_bookmark</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Anthology</span>
+</a>
+<a class="hidden flex-col items-center justify-center text-[#001629] dark:text-[#fdf9ef] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="font-sans text-[0.75rem] uppercase tracking-widest">Saved</span>
+</a>
+</nav>
+<!-- Global Noise Texture -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100] bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="data.js?v=2"></script>
+<script src="data_expanded.js?v=2"></script>
+<script src="data_expanded_2.js?v=2"></script>
+<script src="data_frost.js?v=2"></script>
+<script src="app.js?v=2"></script>
+</body></html>
