@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        { "source": "/api/tts", "destination": "/api/tts" },
+        { "source": "/api/tts-available", "destination": "/api/tts-available" }
+    ]
+}
